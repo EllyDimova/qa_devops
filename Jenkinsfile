@@ -10,6 +10,13 @@ pipeline{
                 steps{
                     sh "touch ~/jenkins-tutorial-test/file1 ~/jenkins-tutorial-test/file2"
                 }
+                     }
+            stage('Clone'){
+                steps{
+                    git branch: 'main', url: 'https://github.com/EllyDimova/qa_devops.git'
+                }
+                    
+                    
             }
         }
 }
